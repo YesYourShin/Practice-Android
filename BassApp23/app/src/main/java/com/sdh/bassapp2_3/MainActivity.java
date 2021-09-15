@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     if(Integer.parseInt(num2)==0){
                         Toast.makeText(getApplicationContext(), "0으로 나눌 수 없습니다.", Toast.LENGTH_SHORT).show();
                     } else {
-                        result = Integer.parseInt(num1) / Integer.parseInt(num2);
+                        result = Integer.parseInt(num1) % Integer.parseInt(num2);
                         textResult.setText("계산 결과 : " + result.toString());
                     }
                 }
