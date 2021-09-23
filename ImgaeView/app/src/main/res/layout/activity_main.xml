@@ -7,19 +7,23 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <CheckBox
-        android:id="@+id/checkbox_meat"
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="고기"
-        android:onClick="onCheckboxClicked"/>
-
-    <CheckBox
-        android:id="@+id/checkbox_cheese"
+        android:src="@drawable/r11" />
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="치즈"
-        android:onClick="onCheckboxClicked"/>
-
+        android:src="@drawable/r11" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/r11" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/r11" />
 
 </LinearLayout>

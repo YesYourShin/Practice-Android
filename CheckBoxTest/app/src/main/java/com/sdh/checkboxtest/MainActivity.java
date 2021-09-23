@@ -24,4 +24,6 @@ public class MainActivity extends AppCompatActivity {
             else
                 Toast.makeText(getApplicationContext(), ((CheckBox) view).getText()+" 선택 해제", Toast.LENGTH_SHORT).show();
     }
+
+
 }
