@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Chronometer;
+import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -16,10 +17,9 @@ import android.widget.TimePicker;
 public class yoyakuActivity extends AppCompatActivity {
 
     Chronometer chrono;
-    Button btnStart, btnEnd;
     RadioButton rdoCal, rdoTime;
-    CalendarView calView;
     TimePicker tPicker;
+    DatePicker dPicker;
     TextView tvYear, tvMonth, tvDay, tvHour, tvMin;
     int selectYear, selectMonth, selectDay;
 
@@ -29,16 +29,13 @@ public class yoyakuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_yoyaku);
         setTitle("시간 예약");
 
-        btnStart = (Button) findViewById(R.id.btnStart);
-        btnEnd = (Button) findViewById(R.id.btnEnd);
-
         chrono = (Chronometer) findViewById(R.id.chronometer1);
 
         rdoCal = (RadioButton) findViewById(R.id.rdoCal);
         rdoTime = (RadioButton) findViewById(R.id.rdoTime);
 
         tPicker = (TimePicker) findViewById(R.id.timePicker1);
-        calView = (CalendarView) findViewById(R.id.calendarView1);
+        dPicker = (DatePicker) findViewById(R.id.datePicker1);
 
         tvYear = (TextView) findViewById(R.id.tvYear);
         tvMonth = (TextView) findViewById(R.id.tvMonth);
@@ -47,52 +44,57 @@ public class yoyakuActivity extends AppCompatActivity {
         tvMin = (TextView) findViewById(R.id.tvMin);
 
         tPicker.setVisibility(View.INVISIBLE);
-        calView.setVisibility(View.INVISIBLE);
+        dPicker.setVisibility(View.INVISIBLE);
+        rdoCal.setVisibility(View.INVISIBLE);
+        rdoTime.setVisibility(View.INVISIBLE);
 
-        rdoCal.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                tPicker.setVisibility(View.VISIBLE);
-                calView.setVisibility(View.INVISIBLE);
-            }
-        });
 
-        rdoTime.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                tPicker.setVisibility(View.INVISIBLE);
-                calView.setVisibility(View.VISIBLE);
-            }
-        });
-
-        btnStart.setOnClickListener(new View.OnClickListener() {
+        chrono.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 chrono.setBase(SystemClock.elapsedRealtime());
                 chrono.start();
                 chrono.setTextColor(Color.RED);
+                rdoCal.setVisibility(View.VISIBLE);
+                rdoTime.setVisibility(View.VISIBLE);
             }
         });
 
-        btnEnd.setOnClickListener(new View.OnClickListener() {
+        rdoCal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                tPicker.setVisibility(View.INVISIBLE);
+                dPicker.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        rdoTime.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View vs) {
+                tPicker.setVisibility(View.VISIBLE);
+                dPicker.setVisibility(View.INVISIBLE);
+
+            }
+        });
+
+        tvYear.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
                 chrono.stop();
                 chrono.setTextColor(Color.BLUE);
 
-                tvYear.setText(Integer.toString(selectYear));
-                tvMonth.setText(Integer.toString(selectMonth));
-                tvDay.setText(Integer.toString(selectDay));
+
+                tvYear.setText(Integer.toString(dPicker.getYear()));
+                tvMonth.setText(Integer.toString(dPicker.getMonth()+1));
+                tvDay.setText(Integer.toString(dPicker.getDayOfMonth()));
+
                 tvHour.setText(Integer.toString(tPicker.getCurrentHour()));
                 tvMin.setText(Integer.toString(tPicker.getCurrentMinute()));
 
-            }
-        });
-
-        calView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                selectYear=year;
-                selectMonth=month+1;
-                selectDay=dayOfMonth;
-
+                tPicker.setVisibility(View.INVISIBLE);
+                dPicker.setVisibility(View.INVISIBLE);
+                rdoCal.setVisibility(View.INVISIBLE);
+                rdoTime.setVisibility(View.INVISIBLE);
+                return false;
             }
         });
     }
