@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WidgetPractice">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".yoyakuActivity">
+        <activity android:name=".AutoComplete"></activity>
+        <activity android:name=".yoyakuActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Bar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
