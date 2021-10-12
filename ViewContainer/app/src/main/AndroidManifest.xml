@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sdh.widgetpractice">
+    package="com.sdh.viewcontainer">
 
     <application
         android:allowBackup="true"
@@ -8,11 +8,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WidgetPractice">
-        <activity android:name=".AutoComplete"></activity>
+        android:theme="@style/Theme.ViewContainer">
+        <activity android:name=".TabHostPractice"></activity>
+        <activity android:name=".SlidingDrawerPractice" />
+        <activity android:name=".ViewFlipperPractice" />
+        <activity android:name=".SlidingLayoutPractice2" />
+        <activity android:name=".LayoutViewFlipper" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Bar" />
-        <activity android:name=".yoyakuActivity">
+        <activity android:name=".TabHostPractice2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
