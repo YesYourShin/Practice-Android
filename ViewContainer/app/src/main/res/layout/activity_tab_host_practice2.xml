@@ -20,31 +20,30 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/cat"
-                android:id="@+id/tabCat"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
                 android:src="@drawable/dog"
                 android:id="@+id/tabDog"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/horse"
-                android:id="@+id/tabHorse"/>
+                android:src="@drawable/cat"
+                android:id="@+id/tabCat"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/rabbit"
                 android:id="@+id/tabRabbit"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/horse"
+                android:id="@+id/tabHorse"/>
         </FrameLayout>
 
         <TabWidget
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@android:id/tabs">
-
-        </TabWidget>
+            android:id="@android:id/tabs"
+            android:background="#FFEB3B" />
     </LinearLayout>
 
 </TabHost>
