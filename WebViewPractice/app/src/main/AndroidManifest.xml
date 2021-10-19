@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sdh.viewcontainer">
-
-    <uses-permission android:name="android.permission.INTERNET"/>
+    package="com.sdh.webviewpractice">
 
     <application
         android:allowBackup="true"
@@ -12,14 +10,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".TabHostPractice2"></activity>
-        <activity android:name=".TabHostPractice" />
-        <activity android:name=".SlidingDrawerPractice" />
-        <activity android:name=".ViewFlipperPractice" />
-        <activity android:name=".SlidingLayoutPractice2" />
-        <activity android:name=".LayoutViewFlipper" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".WebViewPractice"
+        <activity android:name=".MainActivity"
             android:label="나의 웹브라우저"
             android:logo="@drawable/yju_logo">
             <intent-filter>
