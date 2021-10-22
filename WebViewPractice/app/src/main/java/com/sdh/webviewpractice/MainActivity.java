@@ -2,6 +2,10 @@ package com.sdh.webviewpractice;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -9,6 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.yju_logo);
 
         edtUrl = (EditText) findViewById(R.id.edtUrl);
         btnGo = (Button) findViewById(R.id.btnGo);
@@ -53,4 +60,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
 }
