@@ -38,7 +38,12 @@ public class Nikki extends AppCompatActivity {
         int cYear = cal.get(Calendar.YEAR);
         int cMonth = cal.get(Calendar.MONTH);
         int cDay = cal.get(Calendar.DAY_OF_MONTH);
-        
+
+        fileName = Integer.toString(cYear) + "_" + Integer.toString(cMonth) + "_" + Integer.toString(cDay) + ".txt";
+        String str = readDiary(fileName);
+        edtDiary.setText(str);
+        btnWrite.setEnabled(true);
+
         dp.init(cYear, cMonth, cDay, new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker datePicker, int i, int i1, int i2) {
