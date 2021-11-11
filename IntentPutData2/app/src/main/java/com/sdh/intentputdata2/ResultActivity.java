@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -29,6 +30,15 @@ public class ResultActivity extends AppCompatActivity {
                 R.drawable.pic9 };
 
         // ★ 입력하기 1등 그림 이름과 그림 파일을 보여준다.
+        TextView tvTop = (TextView) findViewById(R.id.tvTop);
+        ImageView ivTop = (ImageView) findViewById(R.id.ivTop);
+        int maxEntry = 0;
+        for(int i = 1; i < voteResult.length; i++) {
+            if (voteResult[maxEntry] < voteResult[i])
+                maxEntry = i;
+        }
+        tvTop.setText(imageName[maxEntry]);
+        ivTop.setImageResource(imageFileId[maxEntry]);
 
 
         // 9개의 TextView, RatingBar 객체배열

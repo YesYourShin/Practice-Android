@@ -29,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 rating3.setRating(rating3.getRating()+rating3.getStepSize());
             }
         });
+        btnDec.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                rating1.setRating(rating1.getRating()-rating1.getStepSize());
+                rating2.setRating(rating2.getRating()-rating2.getStepSize());
+                rating3.setRating(rating3.getRating()-rating3.getStepSize());
+            }
+        });
 
     }
 }
