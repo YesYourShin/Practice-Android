@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sdh.miniproject">
-
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniProject">
-        <activity android:name=".Chapter7_3"></activity>
+        <activity android:name=".Chapter14_3"></activity>
+
+        <service
+            android:name=".Chapter14_1_2"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Chapter10_4" />
+        <activity android:name=".Chapter10_3_2" />
+        <activity android:name=".Chapter10_2_2" />
+        <activity android:name=".Chapter10_1_3" />
+        <activity android:name=".Chapter14_2" />
+        <activity android:name=".Chapter14_1" />
+        <activity android:name=".Chapter13_2" />
+        <activity android:name=".Chapter13_1" />
+        <activity android:name=".Chapter12_1" />
+        <activity android:name=".Chapter11_1" />
+        <activity android:name=".Chapter11_3" />
+        <activity android:name=".Chapter11_2" />
+        <activity android:name=".Chapter10_3_1" />
+        <activity android:name=".Chapter10_2_1" />
+        <activity android:name=".Chapter10_1_2" />
+        <activity android:name=".Chapter10_1_1" />
+        <activity android:name=".Chapter8_1" />
+        <activity android:name=".Chapter7_3" />
         <activity android:name=".Chapter7_2" />
         <activity android:name=".Chapter7_1" />
         <activity android:name=".MainActivity">
