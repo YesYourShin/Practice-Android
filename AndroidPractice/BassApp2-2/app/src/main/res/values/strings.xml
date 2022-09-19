@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BassApp2-2</string>
+    <string name="btn1_text">학교 홈페이지</string>
+    <string name="btn2_text">전화걸기</string>
+    <string name="btn3_text">갤러리 열기</string>
+    <string name="btn4_text">끝내기</string>
+</resources>

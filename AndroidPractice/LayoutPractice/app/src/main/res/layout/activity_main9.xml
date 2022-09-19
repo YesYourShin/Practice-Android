@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_page1"
+                android:layout_weight="1"
+                android:text="page1"
+                android:onClick="onClicked"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_page2"
+                android:layout_weight="1"
+                android:text="page2"
+                android:onClick="onClicked"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_page3"
+                android:layout_weight="1"
+                android:text="page3"
+                android:onClick="onClicked"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_page4"
+                android:layout_weight="1"
+                android:text="page4"
+                android:onClick="onClicked"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_p1"
+                app:srcCompat="@drawable/dog"/>
+            <ImageView
+                android:layout_width="256dp"
+                android:layout_height="234dp"
+                android:id="@+id/img_p2"
+                app:srcCompat="@drawable/rabbit"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_p3"
+                app:srcCompat="@drawable/horse"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img_p4"
+                app:srcCompat="@drawable/cat"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
